@@ -122,7 +122,14 @@ body {
   }
 
   .hero-banner-img {
-    display: none;
+    display: block;
+    max-width: 100%;
+    height:auto;
+    width:100%;
+    position: relative;
+    right: 0px;
+    top: 0px;
+    margin-top: 80px;
   }
 
   .exercise-card {
