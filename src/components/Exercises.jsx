@@ -17,8 +17,10 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     //initialized/emptya2 array
       let exercisesData = [];
 
+      //all exercises
       if (bodyPart === 'all') {
         exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
+        //exercisess for specific body part
       } else {
         exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
       }

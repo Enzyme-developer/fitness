@@ -12,13 +12,13 @@ const Navbar = () => {
         direction='row'
       >
         <Link to='/'>
-          <img src={logo} alt='logo' style={{width: '48px' , height:' 48px', margin :'0 20px'}} />
+          <img src={logo} alt='logo' style={{width: '48px' , height:' 48px', margin :'0 25px 0 5px'}} />
         </Link>
 
         <Stack
           direction='row'
           alignItems='flex-end'
-          gap='40px'
+          gap='12vw'
           fontSize= '24px'        
         >
 
