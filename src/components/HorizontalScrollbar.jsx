@@ -32,6 +32,7 @@ const RightArrow = () => {
 
 const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
   //define scrolll menu
+  <>
   <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
     {/* map data i.e body parts fetched  */}
     {data.map((item) => (
@@ -41,11 +42,13 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
         title={item.id || item}
         m="0 40px"
       >
-        {/* if there is a body part fetched,display the BodyParts components else display the exerciseCard component */}
+        {/* if there is a body part fetched,display the BodyPart components else display the exerciseCard component */}
         {bodyParts ? <BodyPart item={item} setBodyPart={setBodyPart} bodyPart={bodyPart} /> : <ExerciseCard exercise={item} /> }
       </Box>
     ))}
   </ScrollMenu>
+    <Typography variant='h5' className='align'>Swipe to view various body parts</Typography>
+    </>
 );
 
 export default HorizontalScrollbar;

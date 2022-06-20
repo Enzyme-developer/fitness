@@ -1,6 +1,6 @@
 body {
   font-family: 'Josefin Sans';
-  background-color: #FFFAFB;
+  background-color: #F3f3f3;
 }
 
 * {
@@ -77,6 +77,18 @@ body {
   transition: 0.3s all ease-in-out;
 }
 
+.align{
+  text-align: center;
+  padding-top: 50px;
+  display: none;
+}
+
+.acknowledge{
+  text-align: center;
+  padding: 20px;
+}
+
+
 .exercise-card img {
   height: 326px;
 }
@@ -112,6 +124,8 @@ body {
   }
 
 
+
+
   .react-horizontal-scrolling-menu--scroll-container {
     width: 500px;
   }
@@ -143,8 +157,19 @@ body {
 
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:800px) {
   .exercise-card {
     width: 280px;
+  }
+
+  .align{
+    text-align: center;
+    padding-top: 50px;
+    display: block;
+  }
+
+  .right-arrow,
+  .left-arrow {
+    display:none;
   }
 }

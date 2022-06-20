@@ -11,6 +11,7 @@ const Navbar = () => {
         px='20px'
         direction='row'
       >
+      
         <Link to='/'>
           <img src={logo} alt='logo' style={{width: '48px' , height:' 48px', margin :'0 25px 0 5px'}} />
         </Link>

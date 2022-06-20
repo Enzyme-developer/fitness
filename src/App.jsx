@@ -10,11 +10,15 @@ import {Routes , Route } from 'react-router-dom'
 const App = () => {
   return (
     <Box width='400px' sx={{width: {xl: '1488px'}}} m='auto'>
-       <Navbar />
+      <Navbar />
+      
+       {/* Routing */}
         <Routes>
           <Route path='/' element={<Home />} />
+          {/* route to particular exercise */}
           <Route path='/exercise/:id' element={<ExerciseDetail />} />
         </Routes> 
+        
       <Footer />
     </Box>
   );

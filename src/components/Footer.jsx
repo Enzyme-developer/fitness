@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Stack} from '@mui/material';
+import { Box, Stack , Typography } from '@mui/material';
 import Logo from '../assets/assets/images/Logo-1.png';
 
 const Footer = () => (
@@ -7,6 +7,7 @@ const Footer = () => (
     <Stack gap="40px" sx={{ alignItems: 'center' }} flexWrap="wrap" px="40px" pt="24px">
       <img src={Logo} alt="logo" style={{ width: '200px', height: '41px' }} />
     </Stack> 
+    <Typography className='acknowledge'>Acknowledgement : JSM</Typography>
   </Box>
 );
 

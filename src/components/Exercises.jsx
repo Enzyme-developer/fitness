@@ -6,7 +6,9 @@ import { exerciseOptions, fetchData } from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 import Loader from './Loader';
 
+//bring props from home page
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
+  //state for pages
   const [currentPage, setCurrentPage] = useState(1);
   const [exercisesPerPage] = useState(8);
 
@@ -20,14 +22,14 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       //all exercises
       if (bodyPart === 'all') {
         exercisesData = await fetchData('https://exercisedb.p.rapidapi.com/exercises', exerciseOptions);
-        //exercisess for specific body part
+      //exercisess for specific body part
       } else {
         exercisesData = await fetchData(`https://exercisedb.p.rapidapi.com/exercises/bodyPart/${bodyPart}`, exerciseOptions);
       }
 
       setExercises(exercisesData);
-      console.log(exercises)
-      console.log(exercisesData)
+      // console.log(exercises)
+      // console.log(exercisesData)
     };
 
     fetchExercisesData();
@@ -35,9 +37,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
 
 // Pagination
     
-    //get inde of first exercise
+    //get inde of last exercise
 const indexOfLastExercise = currentPage * exercisesPerPage;
-    //get index of last exercise
+    //get index of first exercise
 const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
     //get the current exercises for particular page
 const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExercise);
@@ -55,12 +57,13 @@ const currentExercises = exercises.slice(indexOfFirstExercise, indexOfLastExerci
   return (
     <Box id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">
 
-    <Typography variant="h4" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">Showing Results</Typography>
+    <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">Showing Results</Typography>
       
     <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
               
-        {currentExercises.map((exercise, idx) => (
-          <ExerciseCard key={idx} exercise={exercise} />
+        {/* map current exercies i.e paginated exercises */}
+        {currentExercises.map((exercise, index) => (
+          <ExerciseCard key={index} exercise={exercise} />
         ))}
               
     </Stack>
