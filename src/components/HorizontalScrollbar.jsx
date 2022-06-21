@@ -47,7 +47,6 @@ const HorizontalScrollbar = ({ data, bodyParts, setBodyPart, bodyPart }) => (
       </Box>
     ))}
   </ScrollMenu>
-    <Typography variant='h5' className='align'>Swipe to view various body parts</Typography>
     </>
 );
 
