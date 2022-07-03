@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Stack } from '@mui/material';
-import logo from '../assets/assets/images/Logo.png'
+// import logo from '../assets/assets/images/Logo.png'
 
 const Navbar = () => {
   return (
       <Stack
         justifyContent='space-around'
+        alignItems='center'
         sx={{ gap: { sm: '122px' }, mt: { sm: '32px', xs: '40px' }, justifyContent: 'none' }}
         px='20px'
         direction='row'
       >
       
-        <Link to='/'>
-          <img src={logo} alt='logo' style={{width: '48px' , height:' 48px', margin :'0 25px 0 5px'}} />
+        <Link to='/' style={{color: "#3a1212" , textDecoration : 'none' ,paddingRight:'10px'}}>
+          <h3 style={{color: "#3a1212" , textDecoration : 'none' ,paddingRight:'10px'}}>GYM F</h3>
         </Link>
 
         <Stack

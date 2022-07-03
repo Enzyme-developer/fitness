@@ -124,8 +124,6 @@ body {
   }
 
 
-
-
   .react-horizontal-scrolling-menu--scroll-container {
     width: 500px;
   }
@@ -135,6 +133,7 @@ body {
     position: static !important;
   }
 
+  
   .hero-banner-img {
     display: block;
     max-width: 100%;
