@@ -14,7 +14,7 @@ const Navbar = () => {
       >
       
         <Link to='/' style={{color: "#3a1212" , textDecoration : 'none' ,paddingRight:'10px'}}>
-          <h3 style={{color: "#3a1212" , textDecoration : 'none' ,paddingRight:'10px'}}>GYM F</h3>
+          <h3 style={{color: "#3a1212" , textDecoration : 'none' ,paddingRight:'10px'}}>GYMM</h3>
         </Link>
 
         <Stack
@@ -25,7 +25,7 @@ const Navbar = () => {
         >
 
           <Link to='/' style={{color: "#3a1212" ,borderBottom : '3px solid #ff2526', textDecoration : 'none' ,paddingRight:'10px'}}>Home</Link>
-          <a href='#exercises' style={{ color: "#3a1212", textDecoration: 'none' }}>Exercises</a>
+          <a href='#exercises' style={{ color: "#3a1212", textDecoration: 'none', paddingLeft:'10px' }}>Exercises</a>
 
         </Stack>
       </Stack>
